@@ -8,7 +8,7 @@ bot.on('ready', () => {
     console.log("Bot Ready !");
 });
 
-bot.login(process.env.TOKEN);
+bot.login('NTI4NTQzMzU4Mjc3MTI0MTE2.DwvJsg.LJ-H0JQrKU1_WgEWXzfF1UR7ao4');
 
 bot.on('message', message => {
     if (message.content === "test"){
@@ -20,7 +20,7 @@ bot.on('message', message => {
     if (message.content === prefix + "aide"){
         var help_embed = new Discord.RichEmbed()
             .setColor('#CD3404')
-            .addField("Aide" , "Les commandes seront bientôt disponible !")
+            .addField("Aide" , "**;**palmarès \n **;**link \n **;**rank \n **;**unlink \n **;**site")
         message.channel.sendEmbed(help_embed);
         //messagechannel
         console.log("Commande Help demandée !");
@@ -83,6 +83,15 @@ bot.on('message', message => {
         console.log("Commande Help demandée !");
     }
 
+    if (message.content === prefix + `rank`){
+        var help_embed = new Discord.RichEmbed()
+            .setColor('#0BD72F')
+            .addField("__RANK__" , "Les rangs disponible sont **en cours de préparation !**")
+        message.channel.sendEmbed(help_embed);
+        //messagechannel
+        console.log("Commande Help demandée !");
+    }
+
     if (message.content === prefix + `unlink`){
         var help_embed = new Discord.RichEmbed()
             .setColor('#C5370A')
@@ -95,7 +104,7 @@ bot.on('message', message => {
     if (message.content === prefix + `site`){
         var help_embed = new Discord.RichEmbed()
             .setColor('#C5370A')
-            .addField("__Développeur du bot__" , "Votre **développeur** a un site à vous montrez ! \n http://neo-production.fr/ ")
+            .addField("__Développeur du bot__" , "Le **développeur** du bot  a un site à vous montrez ! \n http://neo-production.fr/ ")
         message.channel.sendEmbed(help_embed);
         //messagechannel
         console.log("Commande Help demandée !");
