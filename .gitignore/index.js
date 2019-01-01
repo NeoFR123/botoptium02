@@ -8,7 +8,7 @@ bot.on('ready', () => {
     console.log("Bot Ready !");
 });
 
-bot.login('NTI4NTQzMzU4Mjc3MTI0MTE2.DwvJsg.LJ-H0JQrKU1_WgEWXzfF1UR7ao4');
+bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
     if (message.content === "test"){
