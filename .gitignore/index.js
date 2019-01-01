@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 var bot = new Discord.Client();
-var prefix = (";");
+var prefix = ("/");
 
 bot.on('ready', () => {
     bot.user.setPresence({ game: { name: 'Assister la OpTium', type: 0} });
@@ -20,7 +20,7 @@ bot.on('message', message => {
     if (message.content === prefix + "aide"){
         var help_embed = new Discord.RichEmbed()
             .setColor('#CD3404')
-            .addField("Aide" , "**;**palmarès \n **;**link \n **;**rank \n **;**unlink \n **;**site")
+            .addField("Aide" , "**/**palmarès \n **/**link \n **/**rank \n **/**unlink \n **/**site")
         message.channel.sendEmbed(help_embed);
         //messagechannel
         console.log("Commande Help demandée !");
