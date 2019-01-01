@@ -77,7 +77,7 @@ bot.on('message', message => {
     if (message.content === prefix + `link`){
         var help_embed = new Discord.RichEmbed()
             .setColor('#0BD72F')
-            .addField("__Link__" , "**Pour vous link il suffit juste de faire cela =>** \n ;link PC (__PSEUDO DISCORD__) \n **ou** \n ;link PS4 (__PSEUDO DISCORD__) \n **selon votre plateforme !**")
+            .addField("__Link__" , "**Pour vous link il suffit juste de faire cela =>** \n **/**link PC (__PSEUDO DISCORD__) \n **ou** \n **/**link PS4 (__PSEUDO DISCORD__) \n **selon votre plateforme !**")
         message.channel.sendEmbed(help_embed);
         //messagechannel
         console.log("Commande Help demandée !");
