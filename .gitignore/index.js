@@ -1,17 +1,16 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
 
 var bot = new Discord.Client();
 var prefix = ("/");
 
 bot.on('ready', () => {
     bot.user.setPresence({ game: { name: 'Assister la OpTium', type: 0} });
-    console.log("En marche !");
+    console.log("Bot Ready !");
+});
 
 bot.login(process.env.TOKEN);
 
-
-    if (message.content === prefix + `staff-commande`){
+if (message.content === prefix + `staff-commande`){
     if (message.member.hasPermission("MANAGE_MESSAGES"))
         var help_embed = new Discord.RichEmbed()
             .setColor('#C5370A')
@@ -366,13 +365,16 @@ bot.login(process.env.TOKEN);
     
     }
 
+//STATS
+
+
 
     if (!message.content.startsWith(prefix)) return;
 
     var args = message.content.substring(prefix.length).split(" ");
 
     switch (args[0].toLowerCase()) {
-        case "rienrien":
+        case "stats":
 
         var userCreateDate = message.author.createdAt.toString().split(" ");
         var msauthor = message.author.id;
@@ -397,5 +399,3 @@ bot.login(process.env.TOKEN);
         
         
      }
-
-});
